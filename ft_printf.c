@@ -12,17 +12,18 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+#include "libftprintf.h"
 
 static int type_parser(char type, va_list *args)
 {
     if (type == 'c')
-        //return (ft_printf_c(args));
+        return (ft_printf_char(args));
     if (type == 's')
-        //return (ft_printf_s(args));
+        return (ft_printf_str(args));
     if (type == 'p')
         //return (ft_printf_p(args));
     if (type == 'd' || type == 'i')
-        //return (ft_printf_int(args));
+        return (ft_printf_int(args));
     if (type == 'u')
         //return (ft_printf_u(args));
     if (type == 'x')
