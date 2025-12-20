@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include "libftprintf.h"
 
-int ft_printf_c(va_list *args)
+int ft_printf_char(va_list *args)
 {
     char c;
 
