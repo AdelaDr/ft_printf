@@ -41,8 +41,8 @@ static int	ft_putnbr(int nb)
 
 int ft_printf_int(va_list *args)
 {
-    int nb;
+    int count;
 
-    nb = ft_putnbr(va_arg(*args,int));
-    return (nb);
+    count = ft_putnbr(va_arg(*args,int));
+    return (count);
 }
