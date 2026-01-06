@@ -27,9 +27,9 @@ static int type_parser(char type, va_list *args)
     if (type == 'u')
         return (ft_printf_unsigned(args));
     if (type == 'x')
-        //return (ft_printf_x(args));
+        return (ft_printf_hex(args));
     if (type == 'X')
-        //return (ft_printf_X(args));
+        return (ft_printf_hexupper(args));
     return (0);
 }
 
