@@ -20,5 +20,6 @@ int ft_printf_int(va_list *args);
 int	ft_printf_unsigned(va_list *args);
 int	ft_printf_hex(va_list *args);
 int	ft_printf_hexupper(va_list *args);
+int ft_printf_address(va_list *args);
 
 #endif
