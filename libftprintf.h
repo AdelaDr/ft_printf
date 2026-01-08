@@ -13,6 +13,9 @@
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
 
+#include <stdarg.h>
+#include <unistd.h>
+
 int ft_printf(const char *format, ...);
 int ft_printf_char(va_list *args);
 int ft_printf_str(va_list *args);
