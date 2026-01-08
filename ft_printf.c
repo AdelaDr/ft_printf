@@ -21,7 +21,7 @@ static int type_parser(char type, va_list *args)
     if (type == 's')
         return (ft_printf_str(args));
     if (type == 'p')
-        //return (ft_printf_p(args));
+        return (ft_printf_address(args));
     if (type == 'd' || type == 'i')
         return (ft_printf_int(args));
     if (type == 'u')
