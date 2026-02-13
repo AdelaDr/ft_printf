@@ -65,7 +65,7 @@ cc -Wall -Wextra -Werror main.c libftprintf.a -o my_program
 
 Reimplementation of the `printf` function as `ft_printf`
 
-**Support for multiple format specifiers:**
+- **Support for multiple format specifiers:**
 
     - `%c` – character
 
