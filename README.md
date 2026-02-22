@@ -7,7 +7,7 @@
 - [Description](#description)
 - [Instructions](#instructions)
 - [Resources](#resources)
-- [Library Details](#library-details)
+- [Feature list](#feature-list)
 - [Usage Example](#usage-example)
 - [Technical Choices](#technical-choices)
 
