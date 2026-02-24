@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include <stdarg.h>
 #include <unistd.h>
-#include "libftprintf.h"
 
 static int	ft_putnbr(int nb)
 {
 	char	a;
-    int count;
+	int		count;
 
-    count = 0;
+	count = 0;
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
@@ -29,20 +29,20 @@ static int	ft_putnbr(int nb)
 	{
 		write(1, "-", 1);
 		nb = -nb;
-        count++;
+		count++;
 	}
 	if (nb >= 10)
-        count += ft_putnbr(nb / 10);
+		count += ft_putnbr(nb / 10);
 	a = nb % 10 + '0';
 	write(1, &a, 1);
-    count++;
-    return(count);
+	count++;
+	return (count);
 }
 
-int ft_printf_int(va_list *args)
+int	ft_printf_int(va_list *args)
 {
-    int count;
+	int		count;
 
-    count = ft_putnbr(va_arg(*args,int));
-    return (count);
+	count = ft_putnbr(va_arg(*args, int));
+	return (count);
 }
