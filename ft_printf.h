@@ -1,0 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adrahoto <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/16 18:33:34 by adrahoto          #+#    #+#             */
+/*   Updated: 2025/12/16 18:33:54 by adrahoto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+
+# include <stdarg.h>
+# include <unistd.h>
+
+int	ft_printf(const char *format, ...);
+int	ft_printf_char(va_list *args);
+int	ft_printf_str(va_list *args);
+int	ft_printf_int(va_list *args);
+int	ft_printf_unsigned(va_list *args);
+int	ft_printf_hex(va_list *args);
+int	ft_printf_hexupper(va_list *args);
+int	ft_printf_address(va_list *args);
+
+#endif
