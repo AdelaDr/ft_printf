@@ -10,24 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include <stdarg.h>
 #include <unistd.h>
-#include "libftprintf.h"
 
-int ft_printf_str(va_list *args)
+int	ft_printf_str(va_list *args)
 {
-    char *str;
-    int count;
+	char	*str;
+	int		count;
 
-    count = 0;
-    str = va_arg(*args, char *);
-    if (!str)
-    return (write(1, "(null)", 6));
-    while (*str)
-    {
-        write(1, str, 1);
-        count++;
-        str++;
-    }
-    return (count);
+	count = 0;
+	str = va_arg(*args, char *);
+	if (!str)
+		return (write(1, "(null)", 6));
+	while (*str)
+	{
+		write(1, str, 1);
+		count++;
+		str++;
+	}
+	return (count);
 }
