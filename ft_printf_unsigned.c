@@ -10,22 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include <stdarg.h>
 #include <unistd.h>
-#include "libftprintf.h"
 
-static int ft_putnbr_uns(unsigned int nb)
+static int	ft_putnbr_uns(unsigned int nb)
 {
 	char	a;
-    int count;
+	int		count;
 
-    count = 0;
+	count = 0;
 	if (nb >= 10)
-        count += ft_putnbr_uns(nb / 10);
+		count += ft_putnbr_uns(nb / 10);
 	a = nb % 10 + '0';
 	write(1, &a, 1);
-    count++;
-    return(count);
+	count++;
+	return (count);
 }
 
 int	ft_printf_unsigned(va_list *args)
