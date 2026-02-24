@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include <stdarg.h>
 #include <unistd.h>
-#include "libftprintf.h"
 
 static int	ft_puthex(unsigned int nb)
 {
@@ -36,9 +36,9 @@ int	ft_printf_hex(va_list *args)
 
 	nb = va_arg(*args, unsigned int);
 	if (nb == 0)
-    {
-        write(1, "0", 1);
+	{
+		write(1, "0", 1);
 		return (1);
-    }
+	}
 	return (ft_puthex(nb));
 }
