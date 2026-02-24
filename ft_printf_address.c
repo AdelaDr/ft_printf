@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include <stdarg.h>
 #include <unistd.h>
-#include "libftprintf.h"
 
 static int	ft_puthex(unsigned long nb)
 {
@@ -30,14 +30,22 @@ static int	ft_puthex(unsigned long nb)
 	return (count);
 }
 
-int ft_printf_address(va_list *args)
+int	ft_printf_address(va_list *args)
 {
-    unsigned long address;
-    int count;
+	unsigned long	address;
+	int				count;
 
-    address = va_arg(*args, unsigned long);
-    write(1, "0x", 2);
-    count = 2;
-    count += ft_puthex(address);
-    return (count);
+	address = va_arg(*args, unsigned long);
+	if (address == 0)
+	{
+		write(1, "(nil)", 5);
+		return (5);
+	}
+	else
+	{
+		write(1, "0x", 2);
+		count = 2;
+		count += ft_puthex(address);
+		return (count);
+	}
 }
